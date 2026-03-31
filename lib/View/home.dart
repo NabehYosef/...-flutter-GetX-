@@ -154,3 +154,8 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
+
+//gitbuilder  update rebuild
+//getX        Stream  (reactive)
+//Obx         Stream  (reactive)
