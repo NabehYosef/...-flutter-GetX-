@@ -18,7 +18,7 @@ class HomeGetBuilderController
 
 class HomeGetXController
     extends GetxController {
-  RxInt counter = 0.obs;
+  RxInt counter = 0.obs; //stream : obs
 
   void increment() {
     counter++;

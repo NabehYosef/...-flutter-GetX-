@@ -3,9 +3,13 @@ import 'package:get/get_instance/get_instance.dart';
 import 'package:get/state_manager.dart';
 import 'package:getx_app/Controller/homecontroller.dart';
 
-class HomePage extends StatelessWidget {
+// ignore: must_be_immutable
+class Homeexamples
+    extends StatelessWidget {
   HomeGetXController controller =
       Get.put(HomeGetXController());
+
+  Homeexamples({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
