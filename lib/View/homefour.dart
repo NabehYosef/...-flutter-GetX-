@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
-import 'package:getx_app/Controller/homecontroller.dart';
 import 'package:getx_app/Controller/homefourcontroller.dart';
 
 class HomeFour extends StatelessWidget {
@@ -16,6 +15,7 @@ class HomeFour extends StatelessWidget {
       body: GetBuilder<Homefourcontroller>(
         init: Homefourcontroller(),
         builder: (controller) {
+          print("GetBuilder1 ");
           return Center(
             child: Column(
               children: [

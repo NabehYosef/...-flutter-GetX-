@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_state_manager/src/simple/get_state.dart';
+import 'package:get/get.dart';
+
 import 'package:getx_app/Controller/homecontroller.dart';
 
-class HomeTwo extends StatelessWidget {
-  const HomeTwo({super.key});
+class Dependencyinjection
+    extends StatelessWidget {
+  HomeGetBuilderController controller =
+      //injection this page with pageTwo (We dont need init:Page any More) with injection
+      Get.put(
+        HomeGetBuilderController(),
+        permanent: true,
+      ); //Injection
 
   @override
   Widget build(BuildContext context) {
@@ -18,22 +25,31 @@ class HomeTwo extends StatelessWidget {
               MainAxisAlignment.center,
           children: [
             Text(
-              "GetBuilder Controller",
+              "DependencyInjection Controller",
               style: TextStyle(
                 fontWeight:
                     FontWeight.bold,
               ),
             ),
-
+            IconButton(
+              icon: Icon(Icons.add),
+              onPressed: () {
+                controller.increment();
+              },
+            ),
             GetBuilder<
               HomeGetBuilderController
             >(
-              init:
-                  HomeGetBuilderController(),
               builder: (controller) {
                 return Text(
                   "${controller.counter}",
                 );
+              },
+            ),
+            IconButton(
+              icon: Icon(Icons.remove),
+              onPressed: () {
+                controller.decrement();
               },
             ),
           ],

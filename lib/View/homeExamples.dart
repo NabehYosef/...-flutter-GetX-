@@ -6,9 +6,12 @@ import 'package:getx_app/Controller/homecontroller.dart';
 // ignore: must_be_immutable
 class Homeexamples
     extends StatelessWidget {
-  HomeGetXController controller =
-      Get.put(HomeGetXController());
+  // HomeGetXController controller =
+  //     Get.put(HomeGetXController());
 
+  final controller = Get.lazyPut(
+    () => HomeGetBuilderController(),
+  );
   Homeexamples({super.key});
   @override
   Widget build(BuildContext context) {

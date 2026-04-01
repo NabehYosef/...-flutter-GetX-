@@ -1,5 +1,4 @@
 import 'package:get/get.dart';
-import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class HomeGetBuilderController
     extends GetxController {
@@ -21,6 +20,7 @@ class HomeGetXController
   RxInt counter = 0.obs; //stream : obs
 
   void increment() {
+    //GetX Work Without update()
     counter++;
   }
 
