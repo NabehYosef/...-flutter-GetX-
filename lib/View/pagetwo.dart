@@ -1,28 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-
-import 'package:getx_app/Controller/homecontroller.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_instance/src/extension_instance.dart';
+import 'package:get/get_state_manager/src/simple/get_state.dart';
+import 'package:getx_app/Controller/lifecyclecontroller.dart';
 
 // ignore: must_be_immutable
-class Dependencyinjection
+class PageTwoLifeCycle
     extends StatelessWidget {
-  HomeController controller =
-      //injection this page with pageTwo (We dont need init:Page any More) with injection
-      Get.put(
-        HomeController(),
-        permanent: true,
-      );
-
-  Dependencyinjection({
-    super.key,
-  }); //Injection
-
+  PageTwoLifeCycle({super.key});
+  Lifecyclecontroller controller =
+      Get.find();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.orange,
-        title: Text("HomeTow"),
+        title: Text("Page Two"),
       ),
       body: Center(
         child: Row(
@@ -30,7 +22,7 @@ class Dependencyinjection
               MainAxisAlignment.center,
           children: [
             Text(
-              "DependencyInjection Controller",
+              "Life Cycle Controller Page Two",
               style: TextStyle(
                 fontWeight:
                     FontWeight.bold,
@@ -39,10 +31,14 @@ class Dependencyinjection
             IconButton(
               icon: Icon(Icons.add),
               onPressed: () {
-                controller.increment();
+                controller.Increment();
               },
             ),
-            GetBuilder<HomeController>(
+            GetBuilder<
+              Lifecyclecontroller
+            >(
+              init:
+                  Lifecyclecontroller(),
               builder: (controller) {
                 return Text(
                   "${controller.counter}",
@@ -52,7 +48,7 @@ class Dependencyinjection
             IconButton(
               icon: Icon(Icons.remove),
               onPressed: () {
-                controller.decrement();
+                controller.Decrement();
               },
             ),
           ],

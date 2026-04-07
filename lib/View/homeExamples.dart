@@ -1,3 +1,4 @@
+// ignore: file_names
 import 'package:flutter/material.dart';
 import 'package:get/get_instance/get_instance.dart';
 import 'package:get/state_manager.dart';
@@ -6,12 +7,12 @@ import 'package:getx_app/Controller/homecontroller.dart';
 // ignore: must_be_immutable
 class Homeexamples
     extends StatelessWidget {
-  // HomeGetXController controller =
-  //     Get.put(HomeGetXController());
+  HomeGetXController controller =
+      Get.put(HomeGetXController());
 
-  final controller = Get.lazyPut(
-    () => HomeGetBuilderController(),
-  );
+  // final controller = Get.lazyPut(
+  //   () => HomeGetBuilderController(),
+  // );
   Homeexamples({super.key});
   @override
   Widget build(BuildContext context) {
@@ -26,11 +27,8 @@ class Homeexamples
               MainAxisAlignment.center,
           children: [
             //GetBuilder Controller
-            GetBuilder<
-              HomeGetBuilderController
-            >(
-              init:
-                  HomeGetBuilderController(),
+            GetBuilder<HomeController>(
+              init: HomeController(),
               builder: (controller) {
                 return Row(
                   mainAxisAlignment:
