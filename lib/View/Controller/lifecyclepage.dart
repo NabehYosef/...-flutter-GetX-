@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:getx_app/View/pageone.dart';
-import 'package:getx_app/View/pagetwo.dart';
-import 'package:getx_app/utils/mindbiding.dart';
+import 'package:getx_app/View/Utils/pageone.dart';
+import 'package:getx_app/View/Utils/pagetwo.dart';
+import 'package:getx_app/utils/bidings.dart';
 
 class LifeCyclePage
     extends StatelessWidget {

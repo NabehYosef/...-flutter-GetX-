@@ -1,7 +1,6 @@
 import 'package:get/get.dart';
 
-import 'package:getx_app/Controller/lifecyclecontroller.dart';
-import 'package:getx_app/View/lifecyclepage.dart';
+import 'package:getx_app/Logic/Controller/lifecyclecontroller.dart';
 
 class MyBinding implements Bindings {
   @override

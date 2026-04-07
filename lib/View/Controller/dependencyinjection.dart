@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:getx_app/Controller/homecontroller.dart';
+import 'package:getx_app/Logic/Controller/homecontroller.dart';
 
 // ignore: must_be_immutable
 class Dependencyinjection
