@@ -4,7 +4,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 class Supermiddleware
     extends GetMiddleware {
   @override
-  int? get priority => 1;
+  int? get priority => 2;
 
   bool myvar = true;
   @override
