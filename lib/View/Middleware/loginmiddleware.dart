@@ -24,7 +24,7 @@ class Loginmiddleware
               ),
               child: InkWell(
                 onTap: () {
-                  sharedPref?.setString(
+                  sharedPref!.setString(
                     "role",
                     "user",
                   );
@@ -57,7 +57,7 @@ class Loginmiddleware
                   );
                 },
                 child: Text(
-                  "Admin",
+                  "Login Admin",
                   style: TextStyle(
                     color: Colors.white,
                   ),

@@ -10,7 +10,7 @@ class HomeMiddleWare
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("SignOut"),
+        title: Text("Home"),
       ),
       body: Center(
         child: Column(

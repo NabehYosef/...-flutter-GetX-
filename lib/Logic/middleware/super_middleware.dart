@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:getx_app/main.dart';
 
 class Supermiddleware
     extends GetMiddleware {
@@ -8,17 +7,15 @@ class Supermiddleware
   int? get priority => 1;
 
   bool myvar = true;
-
   @override
-  // ignore: unnecessary_overrides
   RouteSettings? redirect(
     String? route,
   ) {
     if (myvar == true) {
       return RouteSettings(
-        name: "/Super",
+        name: "super",
       );
     }
-    return super.redirect(route);
+    //  return super.redirect(route);
   }
 }

@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
-import 'package:getx_app/main.dart';
 
 class Super extends StatelessWidget {
   const Super({super.key});

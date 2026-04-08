@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/get_navigation.dart';
+import 'package:get/get.dart';
 import 'package:getx_app/main.dart';
 
 class AuthMiddleWare
@@ -8,22 +8,20 @@ class AuthMiddleWare
   int? get priority => 2;
 
   @override
-  // ignore: unnecessary_overrides
   RouteSettings? redirect(
     String? route,
   ) {
-    if (sharedPref!.getString("user") !=
-        null) {
+    if (sharedPref!.getString("role") ==
+        "user") {
       return RouteSettings(
         name: "/HomeMiddleWare",
       );
     }
-    if (sharedPref!.getString("role") !=
-        null) {
+    if (sharedPref!.getString("role") ==
+        "admin") {
       return RouteSettings(
         name: "/AdminMiddleWare",
       );
     }
-    return super.redirect(route);
   }
 }
