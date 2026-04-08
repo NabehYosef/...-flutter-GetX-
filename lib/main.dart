@@ -7,6 +7,9 @@ import 'package:getx_app/View/Middleware/homemiddleware.dart';
 import 'package:getx_app/View/Middleware/loginmiddleware.dart';
 import 'package:getx_app/Logic/middleware/auth_middleware.dart';
 import 'package:getx_app/View/Loclization%20view/local_view.dart';
+import 'package:getx_app/View/widget/Buttom_sheet.dart';
+import 'package:getx_app/View/widget/Dialog.dart';
+import 'package:getx_app/View/widget/SnackBar.dart';
 import 'package:getx_app/utils/bidings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -47,8 +50,23 @@ class MyApp extends StatelessWidget {
       //===========================///* *//===========================
       initialBinding: MyBinding(),
       //===========================// 1-Call Bidding
-      initialRoute: "/HomeLocal",
+      initialRoute: "/ButtomSheet",
+
       getPages: [
+        GetPage(
+          name: "/ButtomSheet",
+          page: () => ExButtomSheet(),
+        ),
+        GetPage(
+          name: "/SnackBar",
+          page: () => ExSnackBar(),
+        ),
+        //===========================
+        GetPage(
+          name: "/Dialog",
+          page: () => ExDialog(),
+        ),
+        //===========================
         GetPage(
           name: "/HomeLocal",
           page: () => HomeLocal(),
