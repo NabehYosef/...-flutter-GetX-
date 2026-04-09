@@ -10,6 +10,7 @@ import 'package:getx_app/View/Loclization%20view/local_view.dart';
 import 'package:getx_app/View/widget/Buttom_sheet.dart';
 import 'package:getx_app/View/widget/Dialog.dart';
 import 'package:getx_app/View/widget/SnackBar.dart';
+import 'package:getx_app/View/widget/theme.dart';
 import 'package:getx_app/utils/bidings.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
     //===========================
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.light(),
       //===========================///*Translation *//===========================
       // locale: Get.deviceLocale,
       locale:
@@ -50,12 +52,12 @@ class MyApp extends StatelessWidget {
       //===========================///* *//===========================
       initialBinding: MyBinding(),
       //===========================// 1-Call Bidding
-      initialRoute: "/ButtomSheet",
+      initialRoute: "/them",
 
       getPages: [
         GetPage(
-          name: "/ButtomSheet",
-          page: () => ExButtomSheet(),
+          name: "/them",
+          page: () => ExTheme(),
         ),
         GetPage(
           name: "/SnackBar",
@@ -98,4 +100,20 @@ class MyApp extends StatelessWidget {
       ],
     );
   }
+}
+
+//Ex Class Theme
+class Themes {
+  static ThemeData customDarkTheme =
+      ThemeData.dark().copyWith(
+        appBarTheme: AppBarTheme(
+          color: Colors.white,
+        ),
+      );
+  static ThemeData customLightTheme =
+      ThemeData.dark().copyWith(
+        appBarTheme: AppBarTheme(
+          color: Colors.black,
+        ),
+      );
 }
